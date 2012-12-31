@@ -146,7 +146,7 @@ other.js
 			}
 		}
 		return c;
-　　}
+	}
 	window['CHB']['deepCopy'] = deepCopy;
 
 	//base.js 基本操作，作用：获取DOM元素
@@ -1249,7 +1249,5 @@ other.js
 		}
 	};
 	deepCopy(window.CHB, Num);
-
-
 	
 })();
