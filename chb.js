@@ -136,16 +136,16 @@ other.js
 		child.p2();//p2
 	 */
 	function deepCopy(childObj, parentObj) {
-		var c = childObj || {};
+		childObj = childObj || {};
 		for (var i in parentObj) {
 			if (typeof parentObj[i] === 'object') {
-				c[i] = (parentObj[i].constructor === Array) ? [] : {};
-				deepCopy(parentObj[i], c[i]);
+				childObj[i] = (parentObj[i].constructor === Array) ? [] : {};
+				deepCopy(childObj[i], parentObj[i]);
 			} else {
-				c[i] = parentObj[i];
+				childObj[i] = parentObj[i];
 			}
 		}
-		return c;
+		return childObj;
 	}
 	window['CHB']['deepCopy'] = deepCopy;
 
