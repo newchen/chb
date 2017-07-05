@@ -388,7 +388,7 @@ other.js
     function filterSpaceNode(nodes) {
         var arr = [];
         for (var i = 0; i < nodes.length; i++) {
-            if (nodes[i].nodeType == 3 && /^\s+$/.test(nodes[i].nodeValue)) { //如果是文本节点且内容为空白
+            if (nodes[i].nodeType == 3 && /^\s+$/.test(nodes[i].nodeValue)) { //如果是文本节点且内容为空白或换行
                 continue;
             }
             arr.push(nodes[i]);
